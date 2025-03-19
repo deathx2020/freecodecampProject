@@ -1,0 +1,123 @@
+*{
+	font-family: Segoe UI;
+}
+.bloqueWelcome{
+	display: flex;
+	width: 100%;
+	height:80px;
+	background: radial-gradient(#86eb7f 0%, #2c9c24 50%, #122111 100%);
+}
+#welcomeTexto{
+	font-size: 40px;
+	width: 100%;
+	text-align: center;
+	margin:auto;
+}
+#logo{
+	display:block;
+	width: auto;
+	height: 100%;
+}
+
+
+.bloqueNavegador{
+	width: 100%;
+	height:auto;
+	position:sticky;
+	top: 0;
+	padding-top: 0px;
+	margin-bottom: 50px;
+	z-index: 1;
+	background:linear-gradient(#3b4a3a 0%,#222b22 50%,#122111 100%);
+}
+
+#navbar{
+	display:grid;
+	grid-template-columns: repeat(auto-fill, 1fr);
+	grid-auto-flow: column; 
+	gap:1px;
+	width:80%;
+	margin:0px auto 0px auto;
+	flex-wrap: wrap;
+}
+
+.nav-link{
+	color:white;
+	text-decoration: none;
+}
+
+a,a:hover	{
+	text-decoration: none;
+}
+
+#main{
+	display: block;
+	border:1px solid #d1d9e0;
+	width: 90%;
+	margin:20px auto 10px auto;
+}
+
+.subtitulo{
+	display: block;
+	font-weight: bold;
+	font-size:20px;
+	border-bottom:1px solid #d1d9e0;
+	margin-bottom:20px;
+	padding-bottom:10px;
+}
+
+.bloqueProyectList,.bloqueProfileLink{
+	width: 95%;
+	margin:15px auto 5px auto;
+}
+
+table{
+	border:1px solid gray;
+	border-collapse: collapse;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+table tr th, table tr td{
+	border:1px solid;
+	text-align: center;
+	vertical-align: center;
+	padding:10px;
+}
+
+tbody tr:nth-child(odd){
+	background-color: #ffffff;
+}
+tbody tr:nth-child(even){
+	background-color: #f6f8fa;
+}
+
+.bloqueProfileLink{
+	height:500px;
+}
+
+.projectoCelda,.projectoCelda a{
+	transition: all 0.5 ease-in-out;
+}
+
+.projectoCelda:hover{
+		cursor: pointer;
+		background-color: #25292e;
+	}
+.projectoCelda:hover a{
+	color:white;
+}
+
+.perfilSpan{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+header{
+	
+}
+
+
+@media(.projectoCelda:hover){
+		
+}
