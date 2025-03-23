@@ -1,24 +1,36 @@
 *{
 	font-family: Segoe UI;
+	color:white;
+
 }
-.bloqueWelcome{
-	display: flex;
-	width: 100%;
-	height:80px;
-	background: radial-gradient(#86eb7f 0%, #2c9c24 50%, #122111 100%);
+body{
+	background-color: #010409;
 }
-#welcomeTexto{
-	font-size: 40px;
-	width: 100%;
-	text-align: center;
-	margin:auto;
-}
-#logo{
-	display:block;
-	width: auto;
-	height: 100%;
+a,a:hover	{
+	text-decoration: none;
 }
 
+.bloqueTop{
+	display: flex;
+	overflow-wrap: break-word;
+	word-break: break-all;
+	overflow:hidden;
+	width: 100%;
+	height:80px;
+}
+
+#logo{
+	display:block;
+	width: 80px;
+	margin-left:2%;
+}
+
+.topText{
+	font-size: 30px;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
 
 .bloqueNavegador{
 	width: 100%;
@@ -27,32 +39,65 @@
 	top: 0;
 	padding-top: 0px;
 	margin-bottom: 50px;
-	z-index: 1;
-	background:linear-gradient(#3b4a3a 0%,#222b22 50%,#122111 100%);
+	z-index: 2;
+	border-bottom: 1px solid #3d444d;
+	background-color:black;
 }
 
 #navbar{
 	display:grid;
 	grid-template-columns: repeat(auto-fill, 1fr);
 	grid-auto-flow: column; 
-	gap:1px;
-	width:80%;
-	margin:0px auto 0px auto;
+	gap:2rem;
+	width:max-content;
+	max-width: 100%;
+	margin-left:4%;
 	flex-wrap: wrap;
+
 }
 
 .nav-link{
 	color:white;
 	text-decoration: none;
+	padding:3px;
+	border-radius:5px;
+}
+.welcomeBloque{
+	width:90%;
+	margin:20px auto 10px auto;
+	display: flex;
+}
+#welcome-section{
+	font-size: 30px;
+	width: 100%;
+	text-align: left;
+	margin:auto;
+	font-weight:bold ;
+	color:white;
+}
+#lightButton{
+	display: flex;
+	position: fixed;
+	object-fit: cover;
+	border:0;
+	background:repeating-radial-gradient(white 0%, black 100%);
+	opacity:0.9;
+	width:60px;
+	height:60px;
+	right:1%;
+	opacity:0.5;
+	padding: 0;
+	overflow:hidden;
 }
 
-a,a:hover	{
-	text-decoration: none;
+#lightPhoto{
+	width: 100%;
+	opacity:1;
 }
 
 #main{
 	display: block;
-	border:1px solid #d1d9e0;
+	border:1px solid #3d444d;
 	width: 90%;
 	margin:20px auto 10px auto;
 }
@@ -61,7 +106,7 @@ a,a:hover	{
 	display: block;
 	font-weight: bold;
 	font-size:20px;
-	border-bottom:1px solid #d1d9e0;
+	border-bottom:1px solid #3d444d;
 	margin-bottom:20px;
 	padding-bottom:10px;
 }
@@ -72,13 +117,14 @@ a,a:hover	{
 }
 
 table{
-	border:1px solid gray;
+	border:1px solid;
 	border-collapse: collapse;
 	margin-top:20px;
 	margin-bottom:20px;
+	background-color:#1c1b1b;
 }
 
-table tr th, table tr td{
+table tr th, table tr td:not(.projectoCelda){
 	border:1px solid;
 	text-align: center;
 	vertical-align: center;
@@ -86,38 +132,50 @@ table tr th, table tr td{
 }
 
 tbody tr:nth-child(odd){
-	background-color: #ffffff;
+	background-color: #25292e;
 }
 tbody tr:nth-child(even){
-	background-color: #f6f8fa;
+	background-color: #424040;
 }
 
 .bloqueProfileLink{
 	height:500px;
 }
+.projectoCelda{
+	text-align: center;
+	vertical-align: center;
+	border:1px solid;
+}
+
+.project-tile{
+	display: block;
+	width:100%;
+	height: 100%;
+}
 
 .projectoCelda,.projectoCelda a{
 	transition: all 0.5 ease-in-out;
+	
 }
 
 .projectoCelda:hover{
 		cursor: pointer;
-		background-color: #25292e;
+		background:linear-gradient(#25292e 0%, #424040 50%, #ebedef 100%) ;
 	}
-.projectoCelda:hover a{
-	color:white;
-}
+.nav-link:hover{
+		cursor: pointer;
+		background-color:#323e31 ;
+	}
 
 .perfilSpan{
 	font-weight: bold;
 	font-size: 18px;
 }
 
-header{
-	
-}
 
 
-@media(.projectoCelda:hover){
-		
+@media(hover:hover){
+	#lightButton:hover{
+		cursor: pointer;
+	}
 }
